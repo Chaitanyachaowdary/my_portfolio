@@ -34,18 +34,67 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact-info">
-    <h2>Contact Me</h2>
-    <p>I'm always open to new opportunities and collaborations!</p>
-    <ul>
-        <li><strong>Email:</strong> <a href="mailto:yalamasettychaitanyachowdary@gmail.com">yalamasettychaitanyachowdary@gmail.com</a></li>
-        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/chaitanya-yelamasetty-a1487b2a5" target="_blank" rel="noopener noreferrer">linkedin.com/in/chaitanya-yelamasetty-a1487b2a5</a></li>
-        <li><strong>GitHub:</strong> <a href="https://github.com/Chaitanyachaowdary" target="_blank" rel="noopener noreferrer">github.com/Chaitanyachaowdary</a></li>
-        <li><strong>Phone (Optional):</strong> +91-799385693</li>
-        <li><strong>Location (Optional):</strong> Bengaluru, India</li>
-    </ul>
-    <p>Feel free to reach out!</p>
-</section>
+        <Section id="contact" title="Get In Touch">
+            <div className="max-w-xl mx-auto">
+                {isSubmitted ? (
+                    <div className="text-center bg-secondary p-8 rounded-lg animate-fade-in-up">
+                        <h3 className="text-2xl font-bold text-accent mb-4">Thank You!</h3>
+                        <p className="text-light-gray">Your message has been sent successfully. I'll get back to you as soon as possible.</p>
+                    </div>
+                ) : (
+                    <form onSubmit={handleSubmit} className="space-y-6">
+                        <div>
+                            <label htmlFor="name" className="block text-sm font-medium text-medium-gray mb-2">Full Name</label>
+                            <input
+                                type="text"
+                                name="name"
+                                id="name"
+                                required
+                                value={formData.name}
+                                onChange={handleChange}
+                                className="block w-full px-4 py-3 bg-primary border border-secondary rounded-md text-light-gray placeholder-medium-gray/50 focus:ring-1 focus:ring-accent focus:border-accent transition"
+                                placeholder="Your Name"
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor="email" className="block text-sm font-medium text-medium-gray mb-2">Email Address</label>
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                required
+                                value={formData.email}
+                                onChange={handleChange}
+                                className="block w-full px-4 py-3 bg-primary border border-secondary rounded-md text-light-gray placeholder-medium-gray/50 focus:ring-1 focus:ring-accent focus:border-accent transition"
+                                placeholder="you@example.com"
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor="message" className="block text-sm font-medium text-medium-gray mb-2">Message</label>
+                            <textarea
+                                name="message"
+                                id="message"
+                                required
+                                rows={5}
+                                value={formData.message}
+                                onChange={handleChange}
+                                className="block w-full px-4 py-3 bg-primary border border-secondary rounded-md text-light-gray placeholder-medium-gray/50 focus:ring-1 focus:ring-accent focus:border-accent transition"
+                                placeholder="Your message..."
+                            ></textarea>
+                        </div>
+                        <div>
+                            <button
+                                type="submit"
+                                disabled={isSubmitting}
+                                className="w-full px-8 py-4 bg-accent text-primary text-lg font-bold rounded-md hover:bg-accent-hover transition-all duration-300 shadow-lg transform hover:scale-105 disabled:bg-medium-gray/50 disabled:cursor-not-allowed disabled:scale-100"
+                            >
+                                {isSubmitting ? 'Sending...' : 'Send Message'}
+                            </button>
+                        </div>
+                    </form>
+                )}
+            </div>
+        </Section>
     );
 };
 

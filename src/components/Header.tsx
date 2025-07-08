@@ -40,7 +40,7 @@ const Header = () => {
           <a href="#hero" onClick={closeMenu} className="flex items-center text-2xl font-bold text-light-gray hover:text-accent transition-colors duration-300 z-10">
             {/* Using your specified image source */}
             <img
-              src="my-avatar.png" 
+              src="photo.jpg" 
               alt="Profile Photo"
               className="w-12 h-12 rounded-full mr-5" 
             />
