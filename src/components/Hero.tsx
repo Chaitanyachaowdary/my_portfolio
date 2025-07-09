@@ -14,9 +14,17 @@ const Hero = () => {
                 <p className="text-accent text-lg font-medium mb-2">Hi, my name is</p>
                 <h1 className="text-5xl md:text-7xl font-extrabold text-light-gray mb-4">Chaitanya Yelamasetty.</h1>
                 <h2 className="text-4xl md:text-6xl font-extrabold text-medium-gray mb-6">Aspiring Full Stack Web Developer.</h2>
-                <p className="text-medium-gray text-lg max-w-xl mb-8">
-                    I am an aspiring developer With a strong foundation in programming fundamentals and a passion for creating intuitive user experiences, I am an aspiring Full Stack Web Developer. My expertise includes building responsive web applications using modern frontend technologies like React.js, HTML5, CSS3, and Tailwind CSS, complemented by backend skills in Java, Python, and JavaScript. I am eager to apply my problem-solving abilities to contribute to innovative projects and grow within a collaborative development environment.
-                <div className="flex items-center space-x-6">
+                ```
+                                <p className="text-medium-gray text-lg max-w-xl mb-8">
+                                    I am an aspiring developer With a strong foundation in programming fundamentals and a passion for creating intuitive user experiences, I am an aspiring Full Stack Web Developer. My expertise includes building responsive web applications using modern frontend technologies like React.js, HTML5, CSS3, and Tailwind CSS, complemented by backend skills in Java, Python, and JavaScript. I am eager to apply my problem-solving abilities to contribute to innovative projects and grow within a collaborative development environment.
+                                </p>
+                                <div className="flex items-center space-x-6">
+                                    <a href="#projects" className="px-6 py-3 bg-accent text-primary font-bold rounded-md hover:bg-accent-hover transition-colors duration-300 shadow-lg">
+                                        See My Projects
+                                    </a>
+                                    <div className="flex items-center space-x-4">
+                                       <SocialLink href="https://github.com/Chaitanyachaowdary">
+                                          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.
                     <a href="#projects" className="px-6 py-3 bg-accent text-primary font-bold rounded-md hover:bg-accent-hover transition-colors duration-300 shadow-lg">
                         See My Projects
                     </a>
